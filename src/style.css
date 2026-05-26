@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #05010a;
+  color: white;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 18px 14px 96px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(147, 51, 234, 0.28), transparent 32%),
+    radial-gradient(circle at 12% 18%, rgba(124, 58, 237, 0.16), transparent 28%),
+    #05010a;
+}
+
+.shell {
+  width: min(1480px, 100%);
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #a855f7;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(38px, 8vw, 72px);
+  line-height: 0.94;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+p {
+  color: #aaa4ba;
+  line-height: 1.55;
+}
+
+.heroText {
+  max-width: 680px;
+  font-size: 17px;
+}
+
+.badge,
+.liveStatus,
+.emptyStatus {
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: #ddd6fe;
+  background: rgba(168, 85, 247, 0.1);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(22, 12, 42, 0.96), rgba(8, 5, 18, 0.98));
+  border: 1px solid rgba(168, 85, 247, 0.22);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+
+.stats,
+.grid,
+.positionGrid,
+.miniGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.stat span,
+.positionGrid span,
+.miniGrid span {
+  display: block;
+  color: #aaa4ba;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.stat strong {
+  font-size: 24px;
+}
+
+.grid {
+  grid-template-columns: 1fr;
+  margin-bottom: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(168, 85, 247, 0.24);
+  background: #0b0714;
+  color: white;
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+}
+
+.terminal label {
+  display: block;
+  margin: 12px 0;
+  color: #aaa4ba;
+  font-size: 13px;
+}
+
+.summary,
+.emptyBox,
+.warning {
+  border: 1px solid rgba(168, 85, 247, 0.16);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 18px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.summary span,
+.summary small {
+  display: block;
+  color: #aaa4ba;
+}
+
+.summary strong {
+  display: block;
+  margin: 4px 0;
+  font-size: 22px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  min-height: 48px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-weight: 950;
+}
+
+button:disabled {
+  opacity: 0.45;
+}
+
+.long,
+.green {
+  background: linear-gradient(135deg, #15803d, #22c55e);
+}
+
+.short,
+.danger {
+  background: linear-gradient(135deg, #b91c1c, #ef4444);
+}
+
+.ghost {
+  background: rgba(168, 85, 247, 0.13);
+  color: #ddd6fe;
+  border: 1px solid rgba(168, 85, 247, 0.24);
+}
+
+.chart {
+  width: 100%;
+  height: 520px;
+  border: 0;
+  border-radius: 18px;
+  background: #080512;
+}
+
+.video {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 18px;
+  background: #000;
+}
+
+.miniGrid {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 12px;
+}
+
+.miniGrid div,
+.positionGrid div {
+  border: 1px solid rgba(168, 85, 247, 0.14);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.positionCard {
+  margin-bottom: 16px;
+}
+
+.positionGrid {
+  grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+}
+
+.positionGrid strong {
+  display: block;
+  font-size: 18px;
+}
+
+.positionGrid small {
+  display: block;
+  margin-top: 4px;
+  color: #aaa4ba;
+}
+
+.greenText {
+  color: #22c55e !important;
+}
+
+.redText {
+  color: #f87171 !important;
+}
+
+.goldText {
+  color: #fbbf24 !important;
+}
+
+.videoButtons {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.videoButtons button {
+  text-align: left;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(168, 85, 247, 0.16);
+}
+
+.videoButtons button span {
+  display: block;
+  margin-top: 4px;
+  color: #aaa4ba;
+  font-size: 12px;
+}
+
+.videoButtons .activeVideo {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.65), rgba(168, 85, 247, 0.45));
+  border-color: rgba(168, 85, 247, 0.48);
+}
+
+textarea {
+  min-height: 110px;
+  margin-top: 12px;
+  resize: vertical;
+}
+
+.warning,
+.risk {
+  border-color: rgba(248, 113, 113, 0.28);
+  color: #fecaca;
+}
+
+.historyList {
+  display: grid;
+  gap: 10px;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid rgba(168, 85, 247, 0.14);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.historyItem span {
+  display: block;
+  margin-top: 4px;
+  color: #aaa4ba;
+  font-size: 12px;
+}
+
+@media (min-width: 1080px) {
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.65fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    display: block;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 14px;
+  }
+
+  .stats,
+  .miniGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chart {
+    height: 390px;
+  }
+
+  .video {
+    height: 220px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 22px;
+  }
+}
